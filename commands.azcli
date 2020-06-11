@@ -1,0 +1,6 @@
+az account list-locations \
+  --query "[].{Name: name, DisplayName: displayName}" \
+  --output table
+
+  az configure --defaults location=westus2
+  webappsuffix=$RANDOM
